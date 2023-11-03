@@ -1,3 +1,4 @@
+# rubocop:disable Style/ExplicitBlockArgument
 require_relative 'my_enumerable'
 
 class MyList
@@ -8,6 +9,9 @@ class MyList
   end
 
   def each
-    @list.each { |item| yield(item) }
+    @list.each do |item|
+      yield(item)
+    end
   end
 end
+# rubocop:enable Style/ExplicitBlockArgument
